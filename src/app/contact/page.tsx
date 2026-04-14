@@ -1,60 +1,58 @@
 export const metadata = {
-  title: "Contact | NEURAL_MONOLITH",
-  description: "Get in touch with me.",
+  title: "Contact | 양세빈의 블로그",
+  description: "프로젝트 협업 제안 및 문의",
 };
 
 export default function Contact() {
   return (
-    <div className="max-w-2xl mx-auto px-6 py-24 md:py-32 flex flex-col items-center">
-      <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-highest border border-outline-variant/20 rounded-sm mb-6">
-        <span className="w-2 h-2 bg-primary rounded-full"></span>
-        <span className="text-[10px] font-mono text-primary tracking-widest uppercase">CONNECTION_ESTABLISHED</span>
+    <div className="max-w-2xl mx-auto">
+      <div className="mb-10 text-center">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-on-surface mb-4 tracking-tight">연락하기</h1>
+        <p className="text-on-surface-variant text-lg">
+          동아리 활동이나 새로운 사이드 프로젝트 제안은 언제나 환영합니다!
+        </p>
       </div>
-      
-      <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter leading-none mb-4 text-on-surface uppercase">
-        Contact <span className="text-primary">Me</span>
-      </h1>
-      
-      <p className="font-body text-on-surface-variant max-w-xl text-center mb-12">
-        동아리 활동이나 프로젝트 제안, 언제든 환영합니다! 아래 터미널 포트를 통해 메시지를 전송해주세요.
-      </p>
 
-      <form className="w-full bg-[#1C1B1B]/80 backdrop-blur-sm p-8 border border-outline-variant/20 rounded-lg flex flex-col gap-6 shadow-2xl">
-        <div className="flex flex-col gap-2">
-          <label htmlFor="name" className="text-sm font-mono text-secondary tracking-widest uppercase">Name</label>
+      <form className="bg-white p-8 md:p-12 rounded-2xl border border-outline-variant shadow-sm space-y-6">
+        <div className="space-y-2">
+          <label htmlFor="name" className="block text-sm font-bold text-on-surface">이름 (Name)</label>
           <input 
             type="text" 
             id="name" 
-            className="w-full bg-surface-container-highest border border-outline-variant/30 text-on-surface px-4 py-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body" 
+            className="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all text-on-surface bg-surface-dim" 
             placeholder="이름을 입력하세요" 
+            required 
           />
         </div>
 
-        <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="text-sm font-mono text-secondary tracking-widest uppercase">Email</label>
+        <div className="space-y-2">
+          <label htmlFor="email" className="block text-sm font-bold text-on-surface">이메일 (Email)</label>
           <input 
             type="email" 
             id="email" 
-            className="w-full bg-surface-container-highest border border-outline-variant/30 text-on-surface px-4 py-3 rounded-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body" 
+            className="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all text-on-surface bg-surface-dim" 
             placeholder="이메일 주소를 입력하세요" 
+            required 
           />
         </div>
 
-        <div className="flex flex-col gap-2">
-          <label htmlFor="message" className="text-sm font-mono text-secondary tracking-widest uppercase">Message</label>
+        <div className="space-y-2">
+          <label htmlFor="message" className="block text-sm font-bold text-on-surface">내용 (Message)</label>
           <textarea 
             id="message" 
-            className="w-full bg-surface-container-highest border border-outline-variant/30 text-on-surface px-4 py-3 rounded-md min-h-[150px] resize-y focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all font-body" 
-            placeholder="메시지 내용을 적어주세요"
+            rows={5}
+            className="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all text-on-surface bg-surface-dim resize-y" 
+            placeholder="제안하실 내용을 자유롭게 적어주세요."
+            required 
           ></textarea>
         </div>
 
         <button 
-          type="button" 
-          className="mt-4 bg-primary text-on-primary font-headline font-bold uppercase tracking-widest px-6 py-4 rounded-md hover:brightness-110 flex items-center justify-center gap-2 transition-all active:scale-95"
+          type="submit" 
+          className="w-full mt-4 bg-primary-600 text-white font-bold py-4 rounded-lg hover:bg-primary-500 transition-colors shadow-sm flex items-center justify-center gap-2"
         >
           <span className="material-symbols-outlined text-sm">send</span> 
-          Transmit Message
+          메시지 보내기
         </button>
       </form>
     </div>
