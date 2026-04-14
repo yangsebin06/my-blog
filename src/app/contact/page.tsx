@@ -1,60 +1,38 @@
 export const metadata = {
-  title: "Contact | 양세빈의 블로그",
-  description: "프로젝트 협업 제안 및 문의",
+  title: "Contact | 양세빈의 아카이브",
+  description: "연락처 및 소통",
 };
 
 export default function Contact() {
   return (
-    <div className="max-w-2xl mx-auto">
-      <div className="mb-10 text-center">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-on-surface mb-4 tracking-tight">연락하기</h1>
-        <p className="text-on-surface-variant text-lg">
-          동아리 활동이나 새로운 사이드 프로젝트 제안은 언제나 환영합니다!
+    <div className="max-w-2xl mx-auto animate-in fade-in duration-500">
+      <div className="mb-14 text-center">
+        <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-apple-text mb-4">어떻게 도와드릴까요?</h1>
+        <p className="text-apple-textMute text-lg font-medium">
+          사이드 프로젝트 제안이나 코드에 대한 피드백은 언제든 환영입니다.
         </p>
       </div>
 
-      <form className="bg-white p-8 md:p-12 rounded-2xl border border-outline-variant shadow-sm space-y-6">
-        <div className="space-y-2">
-          <label htmlFor="name" className="block text-sm font-bold text-on-surface">이름 (Name)</label>
-          <input 
-            type="text" 
-            id="name" 
-            className="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all text-on-surface bg-surface-dim" 
-            placeholder="이름을 입력하세요" 
-            required 
-          />
+      <div className="bg-white p-8 md:p-12 rounded-[2rem] border border-apple-border/40 shadow-apple flex flex-col items-center justify-center text-center space-y-6">
+        <div className="w-16 h-16 bg-apple-gray flex items-center justify-center rounded-2xl text-apple-text mb-4">
+          <span className="material-symbols-outlined text-[32px]">chat_bubble</span>
         </div>
+        
+        <h2 className="text-2xl font-bold tracking-tight text-apple-text">소통 창구 통합 안내</h2>
+        <p className="text-apple-textMute font-medium leading-relaxed max-w-sm">
+          개인정보 보호를 위해 직접적인 이메일 노출 대신, GitHub 프로필이나 익명 소통 폼을 통해 연락을 받고 있습니다.
+        </p>
+        
+        <div className="w-full h-px bg-apple-border/30 my-6"></div>
 
-        <div className="space-y-2">
-          <label htmlFor="email" className="block text-sm font-bold text-on-surface">이메일 (Email)</label>
-          <input 
-            type="email" 
-            id="email" 
-            className="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all text-on-surface bg-surface-dim" 
-            placeholder="이메일 주소를 입력하세요" 
-            required 
-          />
-        </div>
-
-        <div className="space-y-2">
-          <label htmlFor="message" className="block text-sm font-bold text-on-surface">내용 (Message)</label>
-          <textarea 
-            id="message" 
-            rows={5}
-            className="w-full px-4 py-3 rounded-lg border border-outline focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none transition-all text-on-surface bg-surface-dim resize-y" 
-            placeholder="제안하실 내용을 자유롭게 적어주세요."
-            required 
-          ></textarea>
-        </div>
-
-        <button 
-          type="submit" 
-          className="w-full mt-4 bg-primary-600 text-white font-bold py-4 rounded-lg hover:bg-primary-500 transition-colors shadow-sm flex items-center justify-center gap-2"
+        <a 
+          href="#" 
+          className="w-full sm:w-auto bg-apple-blue text-white font-semibold py-4 px-8 rounded-full hover:bg-apple-blueHover transition-colors shadow-sm flex items-center justify-center gap-2"
         >
-          <span className="material-symbols-outlined text-sm">send</span> 
-          메시지 보내기
-        </button>
-      </form>
+          <span className="material-symbols-outlined text-[18px]">public</span> 
+          GitHub에서 소통하기
+        </a>
+      </div>
     </div>
   );
 }

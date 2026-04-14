@@ -10,24 +10,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          500: '#3b82f6',
-          600: '#2563eb',
-          900: '#1e3a8a',
-        },
-        surface: '#ffffff',
-        'surface-dim': '#f8fafc',
-        'on-surface': '#0f172a',
-        'on-surface-variant': '#475569',
-        outline: '#cbd5e1',
-        'outline-variant': '#e2e8f0',
+        apple: {
+          light: '#fbfbfd',
+          gray: '#f5f5f7',
+          dark: '#1d1d1f',
+          blue: '#0066cc',
+          blueHover: '#0077ed',
+          border: '#d2d2d7',
+          text: '#1d1d1f',
+          textMute: '#86868b'
+        }
       },
       fontFamily: {
-        "headline": ["Inter", "sans-serif"],
-        "body": ["Inter", "sans-serif"],
+        "sans": ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
         "mono": ["Fira Code", "monospace"]
+      },
+      boxShadow: {
+        'apple': '0 4px 24px rgba(0,0,0,0.06)',
+        'apple-hover': '0 8px 32px rgba(0,0,0,0.1)'
       }
     },
   },

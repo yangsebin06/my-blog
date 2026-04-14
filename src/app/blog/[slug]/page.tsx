@@ -2,7 +2,6 @@ import { getPostBySlug, BLOG_POSTS } from "../data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
-// Generate static params for all known posts
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
     slug: post.slug,
@@ -21,22 +20,20 @@ export default async function BlogPost(
     notFound();
   }
 
-  // Very basic simulated markdown rendering
   const createMarkup = (html: string) => {
     let converted = html;
-    converted = converted.replace(/## (.*?)\n/g, '<h2 class="text-2xl font-bold mt-10 mb-4 text-on-surface border-b border-outline-variant pb-2">$1</h2>\n');
-    converted = converted.replace(/### (.*?)\n/g, '<h3 class="text-xl font-bold mt-8 mb-3 text-on-surface">$1</h3>\n');
-    converted = converted.replace(/\`(.*?)\`/g, '<code class="bg-surface-dim text-primary-600 font-mono text-sm px-1.5 py-0.5 rounded border border-outline-variant">$1</code>');
+    converted = converted.replace(/## (.*?)\n/g, '<h2 class="text-2xl font-bold mt-12 mb-6 text-apple-text border-b border-apple-border/30 pb-2 tracking-tight">$1</h2>\n');
+    converted = converted.replace(/### (.*?)\n/g, '<h3 class="text-xl font-bold mt-8 mb-4 text-apple-text tracking-tight">$1</h3>\n');
+    converted = converted.replace(/\`(.*?)\`/g, '<code class="bg-apple-gray text-apple-blue font-mono text-[13px] px-1.5 py-0.5 rounded-md">$1</code>');
     
-    // Markdown lists
-    converted = converted.replace(/- (.*?)\n/g, '<li class="ml-6 list-disc mb-1 text-on-surface-variant">$1</li>\n');
+    converted = converted.replace(/- (.*?)\n/g, '<li class="ml-6 list-disc mb-2 text-apple-textMute font-medium">$1</li>\n');
     
     const paragraphs = converted.split('\n\n')
       .map(p => p.trim())
       .filter(p => p.length > 0)
       .map(p => {
         if (!p.startsWith('<h') && !p.startsWith('<li')) {
-          return `<p class="text-on-surface-variant leading-relaxed mb-6">${p.replace(/\n/g, '<br/>')}</p>`;
+          return `<p class="text-apple-textMute font-medium leading-[1.8] mb-6">${p.replace(/\n/g, '<br/>')}</p>`;
         }
         if (p.startsWith('<li')) {
            return `<ul class="mb-6">${p}</ul>`;
@@ -48,35 +45,35 @@ export default async function BlogPost(
   };
 
   return (
-    <article className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl border border-outline-variant shadow-sm mt-4">
-      <Link href="/blog" className="inline-flex items-center gap-2 text-on-surface-variant font-medium hover:text-primary-600 transition-colors mb-10 text-sm">
-        <span className="material-symbols-outlined text-base">arrow_back</span> 목록으로 돌아가기
+    <article className="max-w-2xl mx-auto bg-white p-8 md:p-14 rounded-[2rem] border border-apple-border/30 shadow-apple mt-4 animate-in fade-in duration-700 slide-in-from-bottom-4">
+      <Link href="/blog" className="inline-flex items-center gap-1.5 text-apple-textMute font-semibold hover:text-apple-blue transition-colors mb-12 text-sm">
+        <span className="material-symbols-outlined text-[18px]">arrow_back_ios_new</span> 목록으로
       </Link>
       
-      <header className="mb-12 border-b border-outline-variant pb-8">
-        <div className="flex flex-wrap gap-2 mb-4">
+      <header className="mb-14">
+        <div className="flex flex-wrap gap-2 mb-6">
           {post.tags.map(tag => (
-            <span key={tag} className="bg-primary-50 text-primary-600 text-xs px-2 py-1 font-medium rounded border border-primary-100">
-              #{tag}
+            <span key={tag} className="bg-apple-gray text-apple-text text-[11px] px-2.5 py-1 font-bold rounded-full">
+              {tag}
             </span>
           ))}
         </div>
-        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-6 text-on-surface">
+        <h1 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.15] mb-8 text-apple-text">
           {post.title}
         </h1>
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
-            <span className="material-symbols-outlined text-sm">person</span>
+        <div className="flex items-center gap-3 pt-6 border-t border-apple-border/40">
+          <div className="w-10 h-10 bg-apple-gray rounded-full flex items-center justify-center text-apple-text">
+            <span className="material-symbols-outlined text-[20px]">person</span>
           </div>
           <div>
-            <div className="text-on-surface font-semibold text-sm">양세빈</div>
-            <time className="text-on-surface-variant text-xs">{post.date}</time>
+            <div className="text-apple-text font-bold text-sm">양세빈</div>
+            <time className="text-apple-textMute text-xs font-medium">{post.date}</time>
           </div>
         </div>
       </header>
 
       <div 
-        className="text-on-surface-variant leading-relaxed text-base md:text-lg"
+        className="text-apple-textMute text-base md:text-[17px] tracking-tight"
         dangerouslySetInnerHTML={createMarkup(post.content)} 
       />
     </article>
