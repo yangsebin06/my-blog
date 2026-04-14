@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#3e6dee",
+                    "inverse-primary": "#1b53d5",
+                    "secondary-fixed-dim": "#00e475",
+                    "error": "#ffb4ab",
+                    "surface-dim": "#131313",
+                    "outline": "#8d90a0",
+                    "tertiary": "#4cd6ff",
+                    "on-surface": "#e5e2e1",
+                    "outline-variant": "#434654",
+                    "on-tertiary-container": "#ffffff",
+                    "tertiary-container": "#00819e",
+                    "on-tertiary-fixed": "#001f28",
+                    "inverse-on-surface": "#313030",
+                    "on-background": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "on-surface-variant": "#c3c5d7",
+                    "primary-fixed-dim": "#b5c4ff",
+                    "on-secondary": "#003918",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-container-highest": "#353534",
+                    "error-container": "#93000a",
+                    "surface": "#131313",
+                    "secondary-fixed": "#62ff96",
+                    "on-tertiary": "#003543",
+                    "background": "#131313",
+                    "on-primary-container": "#ffffff",
+                    "tertiary-fixed": "#b7eaff",
+                    "on-tertiary-fixed-variant": "#004e60",
+                    "surface-tint": "#b5c4ff",
+                    "on-primary-fixed-variant": "#003cac",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-variant": "#353534",
+                    "tertiary-fixed-dim": "#4cd6ff",
+                    "on-secondary-fixed": "#00210b",
+                    "on-primary-fixed": "#00164d",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container": "#201f1f",
+                    "primary": "#b5c4ff",
+                    "on-secondary-container": "#00622e",
+                    "on-secondary-fixed-variant": "#005226",
+                    "on-primary": "#00297b",
+                    "on-error": "#690005",
+                    "secondary-container": "#05e777",
+                    "surface-bright": "#393939",
+                    "secondary": "#7dffa2",
+                    "surface-container-low": "#1c1b1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(19, 19, 19, 0.7); backdrop-filter: blur(20px); }
+        .tech-gradient { background: linear-gradient(180deg, #1C1B1B 0%, #131313 100%); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131313]/70 backdrop-blur-xl shadow-[0_24px_48px_rgba(0,0,0,0.4)] transition-all duration-300">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#B5C4FF]" data-icon="memory">memory</span>
+<h1 class="text-2xl font-bold text-[#B5C4FF] tracking-widest font-['Space_Grotesk'] uppercase">NEURAL_MONOLITH</h1>
+</div>
+<nav class="hidden md:flex gap-8 font-['Space_Grotesk'] tracking-tighter uppercase text-sm">
+<a class="text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Terminal</a>
+<a class="text-[#B5C4FF] border-b-2 border-[#B5C4FF] pb-1 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Core_Logic</a>
+<a class="text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Hardware_Fusion</a>
+<a class="text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Bio_Data</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#B5C4FF] hover:text-[#7DFFA2] cursor-pointer transition-colors" data-icon="terminal">terminal</span>
+</div>
+</div>
+</header>
+<!-- Side Navigation (Mobile/Tablet) -->
+<aside class="fixed inset-y-0 left-0 z-40 h-full w-64 bg-[#1C1B1B] border-r border-[#434654]/15 hidden lg:flex flex-col pt-20">
+<div class="px-6 py-8 flex flex-col gap-1">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg overflow-hidden border border-outline-variant/15">
+<img class="w-full h-full object-cover" data-alt="Close-up professional portrait of a tech architect in a dark studio setting with soft blue rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_-z7PWmTOa940P4uKY8IQWlIE9e0vXn0gCV-hSMbdiHUcdHO2i12MZSDNN4HjeWe5atHQ8hSVAJlsg8oIpWMY2kwf6ySqtsrKCiQ6IA0gqsEaL2VM0uL9J13nRLmSkFxPxn948ltnYrapddV__94BV_SVGneiDa7NFlJXfRPrJt6Zw4zoJKbc1RlNp6lPtyh7L9HEcXT_Yi8Spy0uP2uYkHMjtn3Q159GDJtuma2D0JVatABFbOW_lGF1i4kUi67wCGhIF63P"/>
+</div>
+<div>
+<h3 class="font-mono text-[#7DFFA2] text-xs">Lead_Architect</h3>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">v2.0.4-stable</p>
+</div>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded text-[#E5E2E1]/40 hover:bg-[#353534]/50 hover:text-[#B5C4FF] transition-all duration-200 uppercase font-['Inter'] text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="home">home</span> Terminal
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded bg-[#353534] text-[#7DFFA2] border-l-4 border-[#7DFFA2] transition-all duration-200 uppercase font-['Inter'] text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="Article">article</span> Core_Logic
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded text-[#E5E2E1]/40 hover:bg-[#353534]/50 hover:text-[#B5C4FF] transition-all duration-200 uppercase font-['Inter'] text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="memory">memory</span> Hardware_Fusion
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded text-[#E5E2E1]/40 hover:bg-[#353534]/50 hover:text-[#B5C4FF] transition-all duration-200 uppercase font-['Inter'] text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="person">person</span> Bio_Data
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded text-[#E5E2E1]/40 hover:bg-[#353534]/50 hover:text-[#B5C4FF] transition-all duration-200 uppercase font-['Inter'] text-xs tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="error">error</span> System_Status
+                </a>
+</nav>
+</div>
+</aside>
+<main class="lg:ml-64 pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section: Asymmetric Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-24 items-end">
+<div class="lg:col-span-8">
+<span class="text-secondary font-mono text-sm tracking-[0.3em] mb-4 block uppercase">System.Architect_Initialization</span>
+<h2 class="text-5xl md:text-7xl font-headline font-bold leading-none tracking-tighter text-on-surface mb-8">
+                    Lead Architect: <span class="text-primary italic">KIM_HYUN_WOO</span>
+</h2>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1 bg-secondary-container/10 border border-secondary/20 text-secondary text-[10px] font-mono rounded-sm">AI_INTEGRATION</span>
+<span class="px-3 py-1 bg-primary-container/10 border border-primary/20 text-primary text-[10px] font-mono rounded-sm">EMBEDDED_SYSTEMS</span>
+<span class="px-3 py-1 bg-surface-container-highest border border-outline-variant/20 text-on-surface-variant text-[10px] font-mono rounded-sm">FULL_STACK_ARCH</span>
+</div>
+</div>
+<div class="lg:col-span-4 lg:pl-12">
+<p class="text-on-surface-variant text-sm leading-relaxed border-l-2 border-primary/30 pl-6 py-2">
+                    소프트웨어 공학의 정밀함과 하드웨어의 물리적 한계를 결합하여 차세대 지능형 시스템을 구축합니다. 
+                </p>
+</div>
+</section>
+<!-- Biography: Bento Grid Pattern -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
+<!-- Biography Content -->
+<div class="lg:col-span-2 bg-surface-container-low p-8 lg:p-12 border border-outline-variant/10">
+<h3 class="text-2xl font-headline font-bold text-[#B5C4FF] mb-8 tracking-tight">Biography.exec()</h3>
+<div class="space-y-6 text-on-surface/80 leading-relaxed body-lg">
+<p>
+                        디지털 세계의 논리 구조와 물리 세계의 전자 회로가 만나는 지점에서 혁신을 찾습니다. 소프트웨어 엔지니어링의 정수인 객체 지향 설계와 마이크로서비스 아키텍처를 깊이 있게 탐구하며, 이를 실제 하드웨어 제어와 결합하는 'Hardware-AI Fusion' 프로젝트에 매진하고 있습니다.
+                    </p>
+<p>
+                        단순한 코드 작성을 넘어, 시스템의 효율성과 확장성을 고려한 최적의 아키텍처를 설계하는 것을 목표로 합니다. 특히 임베디드 시스템에서의 저전력 AI 추론 엔진 구현과 실시간 데이터 처리 파이프라인 구축에 강점을 가지고 있습니다.
+                    </p>
+</div>
+</div>
+<!-- Profile Image / Tech Visual -->
+<div class="relative overflow-hidden group border border-outline-variant/10 aspect-square lg:aspect-auto">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Macro photography of a sleek black circuit board with glowing electric blue and cyber green LED pathways" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3FmcegY487xOmYATqyn-UtL1np1DIwmPzQtjaxqNdEihiIX-z2tEpB9HE7UUet0lqauz5XfJuwFqk2bYIJ1siN5aVv7mpT1PRbmu0QpP49WXUgiK5ONq9aykYZGKonL3DOZMybhPv5bKrjf8jElSQIKHxSz7M_ZoOW5MndgJZzda9jxHHTdPEv3_yBjfdzmMQkQU4YsdULjNTiwK590VaW-RJTzcrkEG87lWxiGySq-k4VCh-6WT8B6zVkCPtiz7GkPKdJEs7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<p class="text-[10px] font-mono text-secondary tracking-widest uppercase mb-1">Hardware_Fusion</p>
+<p class="text-xl font-headline font-bold">Neural Core v1.0</p>
+</div>
+</div>
+<!-- Academic Milestones -->
+<div class="bg-surface-container-high p-8 border-l-4 border-primary">
+<h4 class="text-xs font-mono text-primary mb-6 uppercase tracking-widest">Milestones.log</h4>
+<ul class="space-y-6">
+<li class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:bg-primary">
+<p class="text-[10px] text-on-surface-variant font-mono">2021 - PRESENT</p>
+<p class="text-sm font-semibold">소프트웨어 공학 전공</p>
+<p class="text-xs text-on-surface-variant">시스템 아키텍처 및 분산 컴퓨팅 연구</p>
+</li>
+<li class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:bg-outline-variant">
+<p class="text-[10px] text-on-surface-variant font-mono">2023.08</p>
+<p class="text-sm font-semibold">전국 AI-IoT 경진대회</p>
+<p class="text-xs text-on-surface-variant">최우수상: 엣지 컴퓨팅 기반 실시간 감지 시스템</p>
+</li>
+<li class="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:bg-outline-variant">
+<p class="text-[10px] text-on-surface-variant font-mono">2022.12</p>
+<p class="text-sm font-semibold">오픈소스 컨트리뷰터</p>
+<p class="text-xs text-on-surface-variant">커널 수준 드라이버 최적화 프로젝트 참여</p>
+</li>
+</ul>
+</div>
+<!-- Skill Matrix -->
+<div class="bg-surface-container p-8 lg:col-span-2 border border-outline-variant/5">
+<h4 class="text-xs font-mono text-secondary mb-8 uppercase tracking-widest">Technical_Stack.json</h4>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<p class="text-[10px] font-mono text-on-surface-variant mb-3 border-b border-outline-variant/30 pb-1">AI_ML</p>
+<p class="text-sm font-bold mb-1">TensorFlow</p>
+<p class="text-sm font-bold mb-1">PyTorch</p>
+<p class="text-sm font-bold">Edge AI</p>
+</div>
+<div>
+<p class="text-[10px] font-mono text-on-surface-variant mb-3 border-b border-outline-variant/30 pb-1">BACKEND</p>
+<p class="text-sm font-bold mb-1">Go / Rust</p>
+<p class="text-sm font-bold mb-1">Kubernetes</p>
+<p class="text-sm font-bold">gRPC</p>
+</div>
+<div>
+<p class="text-[10px] font-mono text-on-surface-variant mb-3 border-b border-outline-variant/30 pb-1">EMBEDDED</p>
+<p class="text-sm font-bold mb-1">C / C++</p>
+<p class="text-sm font-bold mb-1">RTOS</p>
+<p class="text-sm font-bold">FPGA / HDL</p>
+</div>
+<div>
+<p class="text-[10px] font-mono text-on-surface-variant mb-3 border-b border-outline-variant/30 pb-1">ARCHITECTURE</p>
+<p class="text-sm font-bold mb-1">Microservices</p>
+<p class="text-sm font-bold mb-1">Event-Driven</p>
+<p class="text-sm font-bold">Domain Driven</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision Section: Deep Content Area -->
+<section class="max-w-4xl mx-auto space-y-16 py-12">
+<div class="text-center mb-12">
+<h3 class="text-4xl md:text-6xl font-headline font-bold text-on-surface uppercase tracking-tight mb-4">The_Vision</h3>
+<div class="w-24 h-1 bg-secondary mx-auto"></div>
+</div>
+<div class="space-y-12">
+<article class="relative pl-12 md:pl-20">
+<span class="absolute left-0 top-0 font-mono text-4xl text-outline-variant/20">01</span>
+<h4 class="text-xl font-bold mb-4 text-[#B5C4FF]">인공지능의 물리적 구현 (Physical AI)</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                        미래의 AI는 구름 너머 데이터 센터에만 머무르지 않을 것입니다. 제가 그리는 비전은 '지능의 파편화'입니다. 모든 말단 기기(Edge Device)가 스스로 사고하고 판단할 수 있는 저전력, 고효율 AI 아키텍처를 설계하여, 인간의 삶과 완벽하게 융합된 기술 환경을 조성하는 것입니다. 이는 단순한 자동화를 넘어, 환경에 반응하고 진화하는 '살아있는 시스템'을 구축하는 일입니다.
+                    </p>
+</article>
+<article class="relative pl-12 md:pl-20">
+<span class="absolute left-0 top-0 font-mono text-4xl text-outline-variant/20">02</span>
+<h4 class="text-xl font-bold mb-4 text-[#B5C4FF]">엔지니어링 윤리와 신뢰성 (Trust &amp; Safety)</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                        복잡도가 기하급수적으로 증가하는 현대의 소프트웨어 시스템에서 '신뢰'는 가장 중요한 자산입니다. 형식 검증(Formal Verification)과 철저한 테스트 자동화 프로세스를 통해 오류 없는 시스템을 지향합니다. 인공지능과 하드웨어의 융합이 가속화될수록, 기술의 투명성과 안전성을 보장하는 엔지니어의 책임은 더욱 막중해질 것입니다. 저는 그 신뢰의 기반을 다지는 설계자가 되고자 합니다.
+                    </p>
+</article>
+<article class="relative pl-12 md:pl-20">
+<span class="absolute left-0 top-0 font-mono text-4xl text-outline-variant/20">03</span>
+<h4 class="text-xl font-bold mb-4 text-[#B5C4FF]">학제 간 융합의 선구자 (Interdisciplinary Pioneer)</h4>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                        전통적인 소프트웨어 엔지니어링의 경계는 이미 무너지고 있습니다. 전기 전자 공학, 데이터 사이언스, 그리고 인지 심리학에 이르기까지 폭넓은 지식을 통합하여, 다차원적인 문제 해결 능력을 갖춘 'Lead Architect'로서의 입지를 굳히겠습니다. 50페이지 분량의 보고서보다 더 깊고 단단한 기술적 통찰력을 실제 제품으로 증명해 나가는 것이 저의 최종적인 커리어 로드맵입니다.
+                    </p>
+</article>
+</div>
+<div class="mt-20 p-8 bg-surface-container-lowest border border-dashed border-outline-variant/40 text-center">
+<p class="font-mono text-sm text-on-surface-variant mb-6 uppercase tracking-widest">End of Report // Status: Ongoing</p>
+<button class="bg-primary text-on-primary px-8 py-3 font-bold rounded-sm hover:bg-primary/90 transition-transform active:scale-95 shadow-lg shadow-primary/20">
+                    CONTACT_ARCHITECT
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#434654]/10 py-12 bg-[#131313]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 w-full max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<p class="text-[#B5C4FF] font-['Space_Grotesk'] font-bold text-lg tracking-widest">NEURAL_MONOLITH</p>
+<p class="font-['Roboto_Mono'] text-[10px] uppercase text-[#7DFFA2] tracking-tighter">© 2024 NEURAL_MONOLITH // HARDWARE_AI_FUSION</p>
+</div>
+<div class="flex gap-8 font-['Roboto_Mono'] text-[10px] uppercase">
+<a class="text-[#E5E2E1]/30 hover:text-[#B5C4FF] transition-all opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-[#E5E2E1]/30 hover:text-[#B5C4FF] transition-all opacity-80 hover:opacity-100" href="#">Documentation</a>
+<a class="text-[#E5E2E1]/30 hover:text-[#B5C4FF] transition-all opacity-80 hover:opacity-100" href="#">Status</a>
+</div>
+</div>
+</footer>
+</body></html>

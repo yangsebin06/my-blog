@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#000000",
+                        "secondary-container": "#006d35",
+                        "error-container": "#a70138",
+                        "primary": "#92aaff",
+                        "surface-container-low": "#131313",
+                        "on-secondary-container": "#e3ffe4",
+                        "surface-bright": "#2c2c2c",
+                        "surface-tint": "#92aaff",
+                        "outline": "#777575",
+                        "inverse-primary": "#1c54d5",
+                        "on-background": "#ffffff",
+                        "on-secondary-fixed-variant": "#006a33",
+                        "on-surface-variant": "#adaaaa",
+                        "surface-variant": "#262626",
+                        "on-error": "#490013",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary": "#006a33",
+                        "on-tertiary-fixed": "#004c23",
+                        "tertiary-dim": "#6ef095",
+                        "secondary-dim": "#6bed92",
+                        "surface-container": "#1a1919",
+                        "surface-container-high": "#201f1f",
+                        "on-secondary-fixed": "#004a22",
+                        "on-primary": "#002777",
+                        "on-primary-fixed-variant": "#002571",
+                        "surface-container-highest": "#262626",
+                        "background": "#0e0e0e",
+                        "primary-dim": "#3c6bec",
+                        "on-error-container": "#ffb2b9",
+                        "error-dim": "#d73357",
+                        "on-tertiary-container": "#00612e",
+                        "outline-variant": "#494847",
+                        "primary-fixed": "#7d9cff",
+                        "error": "#ff6e84",
+                        "primary-fixed-dim": "#688dff",
+                        "inverse-surface": "#fcf8f8",
+                        "tertiary": "#d1ffd6",
+                        "tertiary-container": "#7dffa2",
+                        "secondary-fixed": "#7afc9f",
+                        "surface": "#0e0e0e",
+                        "on-secondary": "#005f2d",
+                        "on-primary-container": "#001d5d",
+                        "secondary-fixed-dim": "#6bed92",
+                        "tertiary-fixed-dim": "#6ef095",
+                        "tertiary-fixed": "#7dffa2",
+                        "on-surface": "#ffffff",
+                        "primary-container": "#7d9cff",
+                        "secondary": "#7afc9f",
+                        "on-tertiary-fixed-variant": "#006c34",
+                        "surface-dim": "#0e0e0e",
+                        "inverse-on-surface": "#565554"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"],
+                        "mono": ["Fira Code"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-image: radial-gradient(circle at 2px 2px, #262626 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-950/60 backdrop-blur-md shadow-[0px_0px_15px_rgba(125,255,162,0.1)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500 dark:text-blue-400" data-icon="terminal">terminal</span>
+<span class="text-xl font-black tracking-tighter text-white uppercase font-['Plus_Jakarta_Sans']">YSB // TECH ARCHIVE</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-blue-400 font-bold font-['Plus_Jakarta_Sans'] transition-all duration-300 hover:bg-white/5 px-3 py-1 rounded" href="#">home</a>
+<a class="text-neutral-400 font-['Plus_Jakarta_Sans'] transition-all duration-300 hover:bg-white/5 px-3 py-1 rounded" href="#">article</a>
+<a class="text-neutral-400 font-['Plus_Jakarta_Sans'] transition-all duration-300 hover:bg-white/5 px-3 py-1 rounded" href="#">person</a>
+</nav>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/30 scale-95 active:opacity-80 transition-all">
+<img alt="User profile avatar" data-alt="close-up portrait of a professional software engineer with modern glasses in a dimly lit studio with blue ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMRlIGaS3cU1VRA9alnuyFRGJ1DcI-6qD5ItsKYqzPL3rDW-CBItz-4BCohvg8gLZrcTxbp4B0goGMwx4pFfIiEPj7OI0cdgWT08qs-2ckBrXL2BenDaLIOP7zYO8LS5fLuzNRqHi0KyHz1oKPPukHTtdHNaM2hZ9S-CEio-NAcecnSOGkLMxXB0lVdFrcPAfwjntHPqBArQ8COhYRjwSKhv2wUVCuVGDHNwcuBjhbd9EIpDuO7Ox7ADYqOgUgufM9X-ZlJHXS"/>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-40">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center mb-32">
+<div class="relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-fixed text-xs font-mono tracking-widest mb-6">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                    SYSTEM_ACTIVE: V.2.0.4
+                </div>
+<h1 class="text-6xl md:text-8xl font-black tracking-tighter text-white mb-4 leading-none">
+                    YANG <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">SEBIN</span>
+</h1>
+<p class="text-xl font-mono text-on-surface-variant max-w-lg mb-10 leading-relaxed">
+                    Software Engineer // AI &amp; Electronics Fusion. Building the bridge between synaptic logic and silicon architecture.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-gradient-to-br from-secondary to-secondary-container text-on-secondary px-8 py-4 rounded-lg font-bold text-sm tracking-tight flex items-center gap-2 shadow-[0_0_20px_rgba(122,252,159,0.2)] hover:shadow-[0_0_30px_rgba(122,252,159,0.4)] transition-all">
+                        View Archive <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-surface-container-high/50 border border-outline-variant/20 backdrop-blur-sm text-on-surface px-8 py-4 rounded-lg font-bold text-sm tracking-tight hover:bg-surface-container-highest transition-all">
+                        Latest Research
+                    </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-10 bg-secondary/10 blur-[100px] rounded-full"></div>
+<div class="relative aspect-square rounded-xl overflow-hidden bg-surface-container-low shadow-2xl border border-outline-variant/10">
+<img class="w-full h-full object-cover mix-blend-screen opacity-80" data-alt="abstract glowing blue and green neural network lines resembling fiber optics or digital circuitry on a deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT-C2NZfpUmKKySbZ5Yc-ZPjqe1gmDzVY6fpXARwhVf7qZtX6o_351xiyufNbniGAznAa3QSTjhidEWWc5VJQdElBPjrvw4ZLTQCyu4IdMTRV-ia6ZKdwevyD81VKPxeWK3LtilkJhpyK8GYfAuEM0SSc7glW9ZUTjcLQcdxLlpuTJKNVI3pIE7qc2xVZA-RXBsl1toXuVvZXLHtaRTfuIlnVR19YEbL-9JM5tI5gWgDQl3RKgYWpczeiwrGuTv2sq4U0AzT5F"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<!-- Technical overlays -->
+<div class="absolute top-4 left-4 p-4 border-l-2 border-t-2 border-secondary/40 font-mono text-[10px] text-secondary">
+                        01011001 01010011 01000010
+                    </div>
+</div>
+</div>
+</section>
+<!-- Featured Bento Grid -->
+<section class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end gap-4 mb-16">
+<div>
+<span class="font-mono text-secondary text-sm tracking-[0.2em] uppercase">Laboratory</span>
+<h2 class="text-4xl font-bold tracking-tight text-white mt-2">Latest Research</h2>
+</div>
+<a class="font-mono text-on-surface-variant hover:text-white transition-colors text-sm flex items-center gap-2" href="#">
+                    EXPLORE_ALL <span class="material-symbols-outlined text-[18px]" data-icon="north_east">north_east</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Research Card 1 -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-low p-8 border border-outline-variant/5 hover:border-primary/20 transition-all duration-500">
+<div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" data-icon="memory">memory</span>
+</div>
+<div class="relative z-10">
+<span class="font-mono text-xs text-primary mb-4 block">AI_EDGE_COMPUTING</span>
+<h3 class="text-3xl font-bold text-white mb-4 group-hover:text-primary transition-colors">Neural Architectures for Real-Time Sensor Fusion</h3>
+<p class="text-on-surface-variant max-w-md mb-8">Exploring the optimization of transformer models for low-latency processing in localized hardware environments.</p>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]" data-icon="code">code</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border border-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]" data-icon="science">science</span>
+</div>
+</div>
+<span class="text-xs font-mono text-neutral-500">READ_TIME: 12_MIN</span>
+</div>
+</div>
+</div>
+<!-- Research Card 2 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 border border-outline-variant/5 hover:border-secondary/20 transition-all duration-500">
+<div class="relative z-10 flex flex-col h-full">
+<span class="font-mono text-xs text-secondary mb-4 block">BIO_TECH</span>
+<h3 class="text-2xl font-bold text-white mb-4 group-hover:text-secondary transition-colors">Digital Twin Synchronicity</h3>
+<p class="text-sm text-on-surface-variant mb-auto">Analyzing bio-feedback loops in closed-circuit technical ecosystems.</p>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary" data-icon="analytics">analytics</span>
+</div>
+</div>
+</div>
+<!-- Feature Card 3 -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-low p-8 border border-outline-variant/5 hover:border-white/20 transition-all duration-500">
+<div class="relative z-10">
+<span class="font-mono text-xs text-neutral-500 mb-4 block">HARDWARE_MODS</span>
+<h3 class="text-2xl font-bold text-white mb-4">Core Projects</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-sm text-on-surface-variant group/item">
+<span class="w-1 h-1 rounded-full bg-secondary"></span>
+<span class="group-hover/item:text-white transition-colors">Project_Onyx_AI</span>
+</li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant group/item">
+<span class="w-1 h-1 rounded-full bg-secondary"></span>
+<span class="group-hover/item:text-white transition-colors">Hydra_OS_Kernel</span>
+</li>
+<li class="flex items-center gap-3 text-sm text-on-surface-variant group/item">
+<span class="w-1 h-1 rounded-full bg-secondary"></span>
+<span class="group-hover/item:text-white transition-colors">Quantum_Vault_Encryption</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Code Snippet Card -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest p-8 border border-outline-variant/10">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-3 h-3 rounded-full bg-error-dim/40"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-dim/40"></div>
+<div class="w-3 h-3 rounded-full bg-primary-dim/40"></div>
+<span class="ml-4 font-mono text-[10px] text-neutral-500 tracking-widest uppercase">System.log --active</span>
+</div>
+<div class="font-mono text-sm leading-relaxed text-tertiary/80">
+<p><span class="text-primary-dim">const</span> architecture = <span class="text-secondary-fixed-dim">new</span> <span class="text-tertiary-fixed-dim">FusionCore</span>({</p>
+<p class="pl-4">engine: <span class="text-tertiary-fixed-dim">'NeuralLink'</span>,</p>
+<p class="pl-4">mode: <span class="text-tertiary-fixed-dim">'Asynchronous'</span>,</p>
+<p class="pl-4">optimization: <span class="text-secondary-fixed-dim">true</span></p>
+<p>});</p>
+<p class="mt-2 text-neutral-600">// Initializing tech garden protocols...</p>
+<p><span class="text-primary-dim">await</span> architecture.<span class="text-tertiary-fixed-dim">deploy</span>();</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 rounded-full w-[90%] max-w-md px-4 bg-neutral-900/80 backdrop-blur-xl z-50 flex justify-around items-center h-16 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+<a class="bg-emerald-400/10 text-emerald-400 rounded-full p-3 shadow-[0_0_10px_rgba(122,252,159,0.3)] flex flex-col items-center gap-1" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-mono text-[10px] uppercase tracking-widest">Home</span>
+</a>
+<a class="text-neutral-500 p-3 flex flex-col items-center gap-1 hover:text-emerald-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+<span class="font-mono text-[10px] uppercase tracking-widest">Blog</span>
+</a>
+<a class="text-neutral-500 p-3 flex flex-col items-center gap-1 hover:text-emerald-300 transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-mono text-[10px] uppercase tracking-widest">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full py-12 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+<div>
+<span class="font-bold text-neutral-200 tracking-tighter text-lg">YSB // TECH ARCHIVE</span>
+<p class="font-mono text-xs text-neutral-500 mt-2">© 2024 YSB // TECH ARCHIVE</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-mono text-xs text-neutral-600 hover:text-emerald-400 transition-colors" href="#">CODE_BASE</a>
+<a class="font-mono text-xs text-neutral-600 hover:text-emerald-400 transition-colors" href="#">NET_PROFILE</a>
+<a class="font-mono text-xs text-neutral-600 hover:text-emerald-400 transition-colors" href="#">SYSTEM_OPERATIONAL</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-neutral-500 hover:text-white cursor-pointer" data-icon="terminal">terminal</span>
+<span class="material-symbols-outlined text-neutral-500 hover:text-white cursor-pointer" data-icon="database">database</span>
+</div>
+</div>
+</footer>
+</body></html>

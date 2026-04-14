@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Fira+Code:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#000000",
+                    "secondary-container": "#006d35",
+                    "error-container": "#a70138",
+                    "primary": "#92aaff",
+                    "surface-container-low": "#131313",
+                    "on-secondary-container": "#e3ffe4",
+                    "surface-bright": "#2c2c2c",
+                    "surface-tint": "#92aaff",
+                    "outline": "#777575",
+                    "inverse-primary": "#1c54d5",
+                    "on-background": "#ffffff",
+                    "on-secondary-fixed-variant": "#006a33",
+                    "on-surface-variant": "#adaaaa",
+                    "surface-variant": "#262626",
+                    "on-error": "#490013",
+                    "on-primary-fixed": "#000000",
+                    "on-tertiary": "#006a33",
+                    "on-tertiary-fixed": "#004c23",
+                    "tertiary-dim": "#6ef095",
+                    "secondary-dim": "#6bed92",
+                    "surface-container": "#1a1919",
+                    "surface-container-high": "#201f1f",
+                    "on-secondary-fixed": "#004a22",
+                    "on-primary": "#002777",
+                    "on-primary-fixed-variant": "#002571",
+                    "surface-container-highest": "#262626",
+                    "background": "#0e0e0e",
+                    "primary-dim": "#3c6bec",
+                    "on-error-container": "#ffb2b9",
+                    "error-dim": "#d73357",
+                    "on-tertiary-container": "#00612e",
+                    "outline-variant": "#494847",
+                    "primary-fixed": "#7d9cff",
+                    "error": "#ff6e84",
+                    "primary-fixed-dim": "#688dff",
+                    "inverse-surface": "#fcf8f8",
+                    "tertiary": "#d1ffd6",
+                    "tertiary-container": "#7dffa2",
+                    "secondary-fixed": "#7afc9f",
+                    "surface": "#0e0e0e",
+                    "on-secondary": "#005f2d",
+                    "on-primary-container": "#001d5d",
+                    "secondary-fixed-dim": "#6bed92",
+                    "tertiary-fixed-dim": "#6ef095",
+                    "tertiary-fixed": "#7dffa2",
+                    "on-surface": "#ffffff",
+                    "primary-container": "#7d9cff",
+                    "secondary": "#7afc9f",
+                    "on-tertiary-fixed-variant": "#006c34",
+                    "surface-dim": "#0e0e0e",
+                    "inverse-on-surface": "#565554"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"],
+                    "mono": ["Fira Code"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0e0e0e; color: #ffffff; }
+        .glass-card {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-950/60 backdrop-blur-md shadow-[0px_0px_15px_rgba(125,255,162,0.1)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500 dark:text-blue-400">terminal</span>
+<span class="text-xl font-black tracking-tighter text-white uppercase font-headline">YSB // TECH ARCHIVE</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-blue-400 font-bold transition-all duration-300 hover:bg-white/5 px-3 py-2 rounded-lg" href="#">CODE_BASE</a>
+<a class="text-neutral-400 transition-all duration-300 hover:bg-white/5 px-3 py-2 rounded-lg" href="#">NET_PROFILE</a>
+<a class="text-neutral-400 transition-all duration-300 hover:bg-white/5 px-3 py-2 rounded-lg" href="#">SYSTEM_OPERATIONAL</a>
+</nav>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="User profile avatar" data-alt="Professional portrait of a male tech engineer with short dark hair in a minimal studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANLGza-zj8lBCFkiKf6_19vEWpQlfxL5-pm9ur741x0eIuVP4DlhmBXqnwR9iiNMS8nPbvq-X9H8UY8LFGyrd3Eq_CRYax3lm1XMksLY6c_xJaKg4sxQ-uQwxHEQxSPtyryclx7SsylPdiu6FpkYYgG2D-OFoO4Gpri1z_bxQaB8f2E6vXfwAnV9ILyWWAu-O5q8oobhoOAewSAa6fsaPXzu5585enPUxoUmcihAoRXmEoJ6xXH8qLAZj_lQ-We6AvZnupu5lN"/>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto min-h-screen">
+<!-- Hero Title Section -->
+<div class="mb-16">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 border border-secondary/10 mb-6">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#7afc9f]"></span>
+<span class="font-mono text-[10px] uppercase tracking-widest text-secondary-fixed">LIVE_ARCHIVE_ACTIVE</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-on-background mb-4">
+                TECH <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-primary-container">ARCHIVE</span>
+</h1>
+<p class="text-on-surface-variant max-w-2xl text-lg leading-relaxed">
+                A digital garden documenting the exploration of machine intelligence, hardware synthesis, and the architecture of the invisible.
+            </p>
+</div>
+<!-- Category Filters -->
+<div class="flex flex-wrap gap-3 mb-12">
+<button class="px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-mono text-xs font-bold tracking-widest uppercase transition-all shadow-[0_0_15px_rgba(125,255,162,0.1)]">ALL_SYSTEMS</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/10 text-on-surface-variant font-mono text-xs tracking-widest uppercase hover:bg-white/5 transition-all">[AI]</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/10 text-on-surface-variant font-mono text-xs tracking-widest uppercase hover:bg-white/5 transition-all">[HARDWARE]</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/10 text-on-surface-variant font-mono text-xs tracking-widest uppercase hover:bg-white/5 transition-all">[EMBEDDED]</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high border border-outline-variant/10 text-on-surface-variant font-mono text-xs tracking-widest uppercase hover:bg-white/5 transition-all">[KERNEL]</button>
+</div>
+<!-- Post Grid: Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured Card (Large) -->
+<article class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low transition-all duration-500 hover:shadow-[inset_0_0_20px_rgba(60,107,236,0.2)]">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="Abstract neural network visualization with glowing blue nodes and intricate digital connections on a black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpw8Ef9iZ1aoaKqUdqogy1IB56qGJOkgySIdZtko9Sq7e7shsCx85qNiKnYK9gKm1OW8IoERDKjizVm85VxKNZGUpgwg5W9FSyExZSjQWZSaXkCJcySMFMBKZDR9OnxtaG9qArj6elg3P0VoI2_axrPmg7kwTWnzKdS1NLu_ub1xwbKm4aImZI7mD2mT9goY_4_hLd5hM5l2K3fAPeroBatJW8Xrc__uZN94AG4DSsuyameN4r-JyZCSZgJLs2cBbNjSMgODiT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 p-8 flex flex-col justify-end h-[450px]">
+<div class="flex gap-2 mb-4">
+<span class="font-mono text-[10px] text-secondary border border-secondary/30 px-2 py-0.5 rounded bg-secondary/5">[AI]</span>
+<span class="font-mono text-[10px] text-on-surface-variant uppercase">OCT 24, 2024</span>
+</div>
+<h2 class="font-headline text-3xl font-bold text-white mb-4 max-w-xl group-hover:text-primary transition-colors">Neural Synapse: Architecting Self-Optimizing LLM Quantization</h2>
+<p class="font-mono text-sm text-on-surface-variant max-w-lg mb-6 line-clamp-2">
+                        decrypting: Analysis of 4-bit quantization kernels and their impact on inference latency in edge environments...
+                    </p>
+<a class="inline-flex items-center gap-2 text-secondary font-mono text-xs tracking-tighter group/btn" href="#">
+                        INITIALIZE_READING <span class="group-hover/btn:translate-x-1 transition-transform">-&gt;</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high transition-all duration-500 glass-card hover:shadow-[0_0_20px_rgba(122,252,159,0.15)]">
+<div class="p-6 flex flex-col h-full">
+<div class="w-full aspect-video rounded-lg overflow-hidden mb-6 bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Macro photography of a high-tech green circuit board with glowing components and gold contacts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8U2GnquOC93UdVCFvSpvGpWgxtYRXyjiF0t9VGKne5LdPd66WcaYcqrATNoRDvZlZh5XU7zvssMfrMiPN-iC_pGP-ZcXHmj0G-T3zqVSniKaFHdYQ3kH_wx7zYK1PGHQhsISNagCQr-xvit2GFdGrplkE9c1lw-dkBB9zyCPUC0QAO-Cqvm79oeeLJRd_Xk4tXZ9fr74MbosqMpPbUoKR7dsKU8cMZXDAZ0s3sPC_CZl6qFK36EAGW8rotikT18itfGHqmBwZ"/>
+</div>
+<div class="flex gap-2 mb-3">
+<span class="font-mono text-[10px] text-secondary border border-secondary/30 px-2 py-0.5 rounded bg-secondary/5">[HARDWARE]</span>
+<span class="font-mono text-[10px] text-on-surface-variant uppercase">OCT 21, 2024</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors">PCB Synthesis: Minimalist Arm-Cortex Controllers</h3>
+<p class="font-mono text-xs text-on-surface-variant mb-6 flex-grow">
+                        decrypting: Streamlining trace impedance for 10-layer micro-controllers...
+                    </p>
+<a class="text-secondary font-mono text-xs tracking-tighter" href="#">READ_LOG -&gt;</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-high transition-all duration-500 glass-card hover:shadow-[0_0_20px_rgba(122,252,159,0.15)]">
+<div class="p-6 flex flex-col h-full">
+<div class="w-full aspect-video rounded-lg overflow-hidden mb-6 bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Futuristic cyber security interface with glowing matrix lines and binary code elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAM9GfbycippwIjcEVgAlW_lf9Lo5QamoBP5EQ5_nrpfrEBJPnj9-_5NgwArUemMuUplYm060RlsRwHt8bQjoSP_2HH1-zSjo_rwIaQxhPQnRZylg7-E6g4mLRLIQYoANHmX5RGlzybk5Vda4i51UcPzlHarSZJmDO3GWrjZHve7SZoxREjjs4AOZpqSMzfK1an7t7yYDTo05AnpL4cSzp5cB27dfQazrl2B0U9AFGbWQ5r1kDhaVsxXFQBTmrhpJyGb7I7e9N"/>
+</div>
+<div class="flex gap-2 mb-3">
+<span class="font-mono text-[10px] text-secondary border border-secondary/30 px-2 py-0.5 rounded bg-secondary/5">[EMBEDDED]</span>
+<span class="font-mono text-[10px] text-on-surface-variant uppercase">OCT 18, 2024</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-white mb-4 group-hover:text-primary transition-colors">Real-Time Kernel Patching in Hostile Environments</h3>
+<p class="font-mono text-xs text-on-surface-variant mb-6 flex-grow">
+                        decrypting: Zero-downtime hot-patching for critical sensors...
+                    </p>
+<a class="text-secondary font-mono text-xs tracking-tighter" href="#">READ_LOG -&gt;</a>
+</div>
+</article>
+<!-- Card 4 (Horizontal) -->
+<article class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low transition-all duration-500 border border-outline-variant/10 flex flex-col md:flex-row">
+<div class="md:w-1/2 overflow-hidden">
+<img class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Dense data center server racks with glowing blue status lights in a dark futuristic hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLZb0cnp0y1UJkNqDbrLflmOHmTZdImymhufolHhdQwoSYUINaqyNp15sOzE3WCHg3m-FGl8jSBXWkdU8NlJrY_zJZ1RqKpDdDHeVNQJw5FVfN_WrHVg1Bc266t3NTkpVTr_MdotUHMxqqvSJPCif0C2cofGPmzQl7WqddKARGMYLBiDtqPugm4uenfSPqla8rX0lDB8B2l0WoEPir2injdsSUw5cm4XvtWDrbAGqHZx8QO15Nu294fLjw-FHk6snG1JHTTqiy"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<div class="flex gap-2 mb-4">
+<span class="font-mono text-[10px] text-secondary border border-secondary/30 px-2 py-0.5 rounded bg-secondary/5">[SYSTEMS]</span>
+<span class="font-mono text-[10px] text-on-surface-variant uppercase">OCT 15, 2024</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-white mb-4 group-hover:text-primary transition-colors">Distributed Latency: The Ghost in the Network</h3>
+<p class="font-mono text-xs text-on-surface-variant mb-6">
+                        decrypting: Profiling asynchronous request cycles in high-throughput environments...
+                    </p>
+<a class="text-secondary font-mono text-xs tracking-tighter" href="#">ACCESS_RECORD -&gt;</a>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full py-12 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
+<div class="font-headline font-bold text-neutral-200">YSB // TECH ARCHIVE</div>
+<div class="font-mono text-xs text-neutral-500">© 2024 YSB // TECH ARCHIVE</div>
+<div class="flex gap-6">
+<a class="font-mono text-xs text-neutral-600 hover:text-white transition-colors" href="#">CODE_BASE</a>
+<a class="font-mono text-xs text-neutral-600 hover:text-white transition-colors" href="#">NET_PROFILE</a>
+<a class="font-mono text-xs text-neutral-600 hover:text-white transition-colors" href="#">SYSTEM_OPERATIONAL</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 rounded-full w-[90%] max-w-md px-4 bg-neutral-900/80 backdrop-blur-xl z-50 flex justify-around items-center h-16 shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+<a class="p-3 text-neutral-500 hover:text-emerald-300 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="bg-emerald-400/10 text-emerald-400 rounded-full p-3 shadow-[0_0_10px_rgba(122,252,159,0.3)]" href="#">
+<span class="material-symbols-outlined">article</span>
+</a>
+<a class="p-3 text-neutral-500 hover:text-emerald-300 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+</a>
+</nav>
+</body></html>

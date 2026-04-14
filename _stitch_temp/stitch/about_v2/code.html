@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Fira+Code:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#000000",
+                    "secondary-container": "#006d35",
+                    "error-container": "#a70138",
+                    "primary": "#92aaff",
+                    "surface-container-low": "#131313",
+                    "on-secondary-container": "#e3ffe4",
+                    "surface-bright": "#2c2c2c",
+                    "surface-tint": "#92aaff",
+                    "outline": "#777575",
+                    "inverse-primary": "#1c54d5",
+                    "on-background": "#ffffff",
+                    "on-secondary-fixed-variant": "#006a33",
+                    "on-surface-variant": "#adaaaa",
+                    "surface-variant": "#262626",
+                    "on-error": "#490013",
+                    "on-primary-fixed": "#000000",
+                    "on-tertiary": "#006a33",
+                    "on-tertiary-fixed": "#004c23",
+                    "tertiary-dim": "#6ef095",
+                    "secondary-dim": "#6bed92",
+                    "surface-container": "#1a1919",
+                    "surface-container-high": "#201f1f",
+                    "on-secondary-fixed": "#004a22",
+                    "on-primary": "#002777",
+                    "on-primary-fixed-variant": "#002571",
+                    "surface-container-highest": "#262626",
+                    "background": "#0e0e0e",
+                    "primary-dim": "#3c6bec",
+                    "on-error-container": "#ffb2b9",
+                    "error-dim": "#d73357",
+                    "on-tertiary-container": "#00612e",
+                    "outline-variant": "#494847",
+                    "primary-fixed": "#7d9cff",
+                    "error": "#ff6e84",
+                    "primary-fixed-dim": "#688dff",
+                    "inverse-surface": "#fcf8f8",
+                    "tertiary": "#d1ffd6",
+                    "tertiary-container": "#7dffa2",
+                    "secondary-fixed": "#7afc9f",
+                    "surface": "#0e0e0e",
+                    "on-secondary": "#005f2d",
+                    "on-primary-container": "#001d5d",
+                    "secondary-fixed-dim": "#6bed92",
+                    "tertiary-fixed-dim": "#6ef095",
+                    "tertiary-fixed": "#7dffa2",
+                    "on-surface": "#ffffff",
+                    "primary-container": "#7d9cff",
+                    "secondary": "#7afc9f",
+                    "on-tertiary-fixed-variant": "#006c34",
+                    "surface-dim": "#0e0e0e",
+                    "inverse-on-surface": "#565554"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"],
+                    "mono": ["Fira Code"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface-variant font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-neutral-950/60 backdrop-blur-md flex justify-between items-center px-6 h-16 w-full shadow-[0px_0px_15px_rgba(125,255,162,0.1)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500 dark:text-blue-400">terminal</span>
+<span class="text-xl font-black tracking-tighter text-white uppercase font-headline">YSB // TECH ARCHIVE</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Fira_Code'] text-xs uppercase tracking-widest text-neutral-400 hover:bg-white/5 transition-all duration-300 px-3 py-1 rounded" href="#">CODE_BASE</a>
+<a class="font-['Fira_Code'] text-xs uppercase tracking-widest text-blue-400 font-bold hover:bg-white/5 transition-all duration-300 px-3 py-1 rounded" href="#">PROFILE</a>
+<a class="font-['Fira_Code'] text-xs uppercase tracking-widest text-neutral-400 hover:bg-white/5 transition-all duration-300 px-3 py-1 rounded" href="#">NET_PROFILE</a>
+</nav>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/30 scale-95 active:opacity-80 transition-all duration-300">
+<img alt="User Profile" data-alt="close up professional headshot of a technical architect with neutral expression, soft rim lighting, dark tech background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFeKfEkv9FTiyFp9kW5dNxiu-KPCokTPV3rWF6lj_ojXdv_jwr_4bmG9i-LlaRKIiRjurdoKblm_LWlz6Xp7Wn-rYr1xA0B83vufxITDeWszoDALIPF45clritKfAB_l3xJofC38V07NteVJUnx5foQ5HphGouDBBOzueGFea9Mplzb7PY7g2SmkjClk-sSh9RRv3cUlYk5KbluCxSEu_CbDk0MTpJIERu8x3zTsU8d-kQXUqPljuhZBCH8MQQQu5K-kYo0fmj"/>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center gap-12 mb-32 relative">
+<div class="absolute -top-20 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary via-tertiary-container to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-surface-container-high bg-surface-container-low">
+<img alt="Yang Se-bin" class="w-full h-full object-cover grayscale contrast-125 mix-blend-luminosity hover:grayscale-0 transition-all duration-700" data-alt="portrait of a focused software engineer in a dark studio setting with teal and blue cyan lighting accents on the face edges" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBGoC0bV2ToeJ5pUlKZF26Xp3cEqmwUYfLzIkjYO8jhlpgVoIomgA6-EBWSDqRKQ21-ylHDV3D-bonZwOSqgDbLmOzGcVabqhLXnELY_aRmxmjyxuRrZGgYn_OfGZ5J0i_j95uCFCotDG-QpaWVSxQzkFoHNo6ZCm1YBDhxepmquD5AqM4szrNZ7SYnDwFTOdYPCv968VVcZyiIb3CYia3HVjttoYXrlsk5qzeOM9IJrt8MEmPhlZCYWcLyG7gX81WhBOuMxqM"/>
+</div>
+<div class="absolute -bottom-4 -right-4 bg-surface-container-highest p-4 rounded-xl shadow-xl border border-outline-variant/10">
+<span class="font-mono text-secondary text-xs font-bold tracking-tighter">STATUS: ACTIVE_NODE</span>
+</div>
+</div>
+<div class="flex-1 space-y-6">
+<div class="space-y-2">
+<p class="font-mono text-secondary text-sm tracking-[0.3em] uppercase">Identity // 0xAF23</p>
+<h1 class="text-6xl md:text-8xl font-black text-on-surface tracking-tighter leading-none uppercase italic">
+                        THE <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary-container">ARCHITECT</span>
+</h1>
+</div>
+<div class="max-w-2xl space-y-4">
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        I am <span class="text-on-surface font-semibold">Yang Se-bin</span>, a specialist in navigating the convergence of high-level software abstraction and low-level hardware performance. My work occupies the space between <span class="font-mono text-tertiary">neural networks</span> and <span class="font-mono text-primary">FPGA logic</span>.
+                    </p>
+<p class="text-on-surface-variant/80">
+                        Passionate about the fusion of AI with embedded systems, I design systems that don't just compute—they perceive and adapt. With a foundation in Computer Science and a builder's heart for electronics, I architect the future of autonomous intelligence.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Skills & Stats -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-32">
+<!-- Bio Narrative Panel -->
+<div class="md:col-span-2 glass-panel p-8 rounded-xl border-none shadow-[0px_0px_30px_rgba(0,0,0,0.3)]">
+<h3 class="font-mono text-xs text-secondary-fixed-dim tracking-widest uppercase mb-8 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(122,252,159,0.5)]"></span>
+                    Operational Expertise
+                </h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="font-mono text-xs uppercase text-on-surface/60">C++ / Systems</span>
+<span class="font-mono text-xs text-primary">94%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[94%] shadow-[0_0_10px_rgba(146,170,255,0.4)]"></div>
+</div>
+<div class="flex justify-between items-end pt-4">
+<span class="font-mono text-xs uppercase text-on-surface/60">Python / AI</span>
+<span class="font-mono text-xs text-tertiary-dim">88%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-dim w-[88%] shadow-[0_0_10px_rgba(110,240,149,0.4)]"></div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="font-mono text-xs uppercase text-on-surface/60">FPGA / RTL Design</span>
+<span class="font-mono text-xs text-secondary">82%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[82%] shadow-[0_0_10px_rgba(122,252,159,0.4)]"></div>
+</div>
+<div class="flex justify-between items-end pt-4">
+<span class="font-mono text-xs uppercase text-on-surface/60">Neural Networks</span>
+<span class="font-mono text-xs text-primary-fixed">79%</span>
+</div>
+<div class="h-1 w-full bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed w-[79%] shadow-[0_0_10px_rgba(125,156,255,0.4)]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Radar/Iconic Panel -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between overflow-hidden relative group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+<div class="relative z-10">
+<h3 class="font-mono text-xs text-on-surface/40 tracking-widest uppercase mb-1">CORE_STACK</h3>
+<div class="flex flex-wrap gap-2 mt-4">
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-on-surface-variant border border-outline-variant/10">Verilog</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-on-surface-variant border border-outline-variant/10">PyTorch</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-on-surface-variant border border-outline-variant/10">CUDA</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-mono text-on-surface-variant border border-outline-variant/10">TensorRT</span>
+</div>
+</div>
+<div class="relative h-32 flex items-center justify-center mt-8">
+<div class="absolute w-24 h-24 border border-primary/20 rounded-full animate-[pulse_4s_infinite]"></div>
+<div class="absolute w-16 h-16 border border-secondary/20 rounded-full animate-[pulse_3s_infinite]"></div>
+<span class="material-symbols-outlined text-4xl text-primary opacity-50">hub</span>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="space-y-16">
+<div class="flex items-center gap-4">
+<h2 class="text-3xl font-black text-on-surface tracking-tighter uppercase italic">CHRONICLE</h2>
+<div class="h-px flex-1 bg-gradient-to-r from-outline-variant/30 to-transparent"></div>
+</div>
+<div class="relative space-y-12 before:content-[''] before:absolute before:left-0 md:before:left-1/2 before:w-px before:h-full before:bg-gradient-to-b before:from-primary/50 before:via-secondary/30 before:to-transparent">
+<!-- Timeline Item 1 -->
+<div class="relative flex flex-col md:flex-row gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<h4 class="font-headline text-xl font-bold text-on-surface">Senior Systems Architect</h4>
+<p class="font-mono text-xs text-primary mt-1">2022 - PRESENT // NEO-TECH LABS</p>
+</div>
+<div class="absolute left-[-4px] md:left-1/2 md:ml-[-4px] w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_#92aaff]"></div>
+<div class="md:w-1/2 md:pl-12">
+<p class="text-sm leading-relaxed text-on-surface-variant/70">Leading development of real-time vision pipelines for autonomous robotics. Optimizing inference engines on heterogeneous hardware clusters.</p>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative flex flex-col md:flex-row gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<h4 class="font-headline text-xl font-bold text-on-surface">Embedded Research Lead</h4>
+<p class="font-mono text-xs text-secondary mt-1">2019 - 2022 // VOID SOLUTIONS</p>
+</div>
+<div class="absolute left-[-4px] md:left-1/2 md:ml-[-4px] w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_#7afc9f]"></div>
+<div class="md:w-1/2 md:pl-12">
+<p class="text-sm leading-relaxed text-on-surface-variant/70">Architected custom FPGA accelerators for low-latency financial modeling. Awarded 'Technical Innovator of the Year' in 2021.</p>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative flex flex-col md:flex-row gap-8 md:gap-0">
+<div class="md:w-1/2 md:pr-12 md:text-right">
+<h4 class="font-headline text-xl font-bold text-on-surface">M.S. Computer Science</h4>
+<p class="font-mono text-xs text-on-surface/40 mt-1">2017 - 2019 // UNIVERSITY OF TECHNOLOGY</p>
+</div>
+<div class="absolute left-[-4px] md:left-1/2 md:ml-[-4px] w-2 h-2 rounded-full bg-outline-variant shadow-[0_0_10px_rgba(255,255,255,0.1)]"></div>
+<div class="md:w-1/2 md:pl-12">
+<p class="text-sm leading-relaxed text-on-surface-variant/70">Specialized in Computer Architecture and Neuromorphic Computing. Thesis: Efficient Weight Quantization for On-Chip Inference.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 rounded-full w-[90%] max-w-md px-4 bg-neutral-900/80 backdrop-blur-xl z-50 flex justify-around items-center shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+<a class="text-neutral-500 p-3 hover:text-emerald-300 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+</a>
+<a class="text-neutral-500 p-3 hover:text-emerald-300 transition-colors" href="#">
+<span class="material-symbols-outlined">article</span>
+</a>
+<a class="bg-emerald-400/10 text-emerald-400 rounded-full p-3 shadow-[0_0_10px_rgba(122,252,159,0.3)]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full py-12 mt-20 border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-4">
+<span class="font-['Fira_Code'] text-xs text-neutral-500">© 2024 YSB // TECH ARCHIVE</span>
+<div class="flex gap-8">
+<a class="font-['Fira_Code'] text-xs text-neutral-600 hover:text-white transition-colors" href="#">CODE_BASE</a>
+<a class="font-['Fira_Code'] text-xs text-neutral-600 hover:text-white transition-colors" href="#">NET_PROFILE</a>
+<a class="font-['Fira_Code'] text-xs text-emerald-400" href="#">SYSTEM_OPERATIONAL</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-neutral-600 text-sm">terminal</span>
+<span class="material-symbols-outlined text-neutral-600 text-sm">memory</span>
+<span class="material-symbols-outlined text-neutral-600 text-sm">hub</span>
+</div>
+</div>
+</footer>
+</body></html>

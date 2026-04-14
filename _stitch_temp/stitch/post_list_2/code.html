@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#3e6dee",
+                      "inverse-primary": "#1b53d5",
+                      "secondary-fixed-dim": "#00e475",
+                      "error": "#ffb4ab",
+                      "surface-dim": "#131313",
+                      "outline": "#8d90a0",
+                      "tertiary": "#4cd6ff",
+                      "on-surface": "#e5e2e1",
+                      "outline-variant": "#434654",
+                      "on-tertiary-container": "#ffffff",
+                      "tertiary-container": "#00819e",
+                      "on-tertiary-fixed": "#001f28",
+                      "inverse-on-surface": "#313030",
+                      "on-background": "#e5e2e1",
+                      "on-error-container": "#ffdad6",
+                      "on-surface-variant": "#c3c5d7",
+                      "primary-fixed-dim": "#b5c4ff",
+                      "on-secondary": "#003918",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-container-highest": "#353534",
+                      "error-container": "#93000a",
+                      "surface": "#131313",
+                      "secondary-fixed": "#62ff96",
+                      "on-tertiary": "#003543",
+                      "background": "#131313",
+                      "on-primary-container": "#ffffff",
+                      "tertiary-fixed": "#b7eaff",
+                      "on-tertiary-fixed-variant": "#004e60",
+                      "surface-tint": "#b5c4ff",
+                      "on-primary-fixed-variant": "#003cac",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-variant": "#353534",
+                      "tertiary-fixed-dim": "#4cd6ff",
+                      "on-secondary-fixed": "#00210b",
+                      "on-primary-fixed": "#00164d",
+                      "surface-container-high": "#2a2a2a",
+                      "inverse-surface": "#e5e2e1",
+                      "surface-container": "#201f1f",
+                      "primary": "#b5c4ff",
+                      "on-secondary-container": "#00622e",
+                      "on-secondary-fixed-variant": "#005226",
+                      "on-primary": "#00297b",
+                      "on-error": "#690005",
+                      "secondary-container": "#05e777",
+                      "surface-bright": "#393939",
+                      "secondary": "#7dffa2",
+                      "surface-container-low": "#1c1b1b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="bg-[#131313]/70 backdrop-blur-xl fixed top-0 w-full z-50 bg-gradient-to-b from-[#1C1B1B] to-[#131313] shadow-[0_24px_48px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#B5C4FF]" data-icon="memory">memory</span>
+<span class="font-['Space_Grotesk'] tracking-widest text-2xl font-bold text-[#B5C4FF] uppercase">NEURAL_MONOLITH</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Terminal</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-[#B5C4FF] border-b-2 border-[#B5C4FF] pb-1 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Core_Logic</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Hardware_Fusion</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Bio_Data</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#B5C4FF] cursor-pointer hover:text-[#7DFFA2] transition-colors" data-icon="terminal">terminal</span>
+</div>
+</div>
+</header>
+<div class="flex pt-16 min-h-screen">
+<!-- NavigationDrawer (Sidebar) -->
+<aside class="hidden lg:block h-screen w-64 bg-[#1C1B1B] border-r border-[#434654]/15 fixed left-0 z-40">
+<div class="flex flex-col h-full py-8">
+<div class="px-6 mb-10 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest overflow-hidden">
+<img alt="Engineer Avatar" class="w-full h-full object-cover" data-alt="Cyberpunk engineer portrait with neon blue highlights and tech-wear aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4urJFMJSQH1ul-ZCF91e7uMXrkfg8Bu-PUWhp6rzG5y5EATthRHby5vpmClhcpklCenRU8U3MANM3DpX80T4Pgon7GyU_OEcRMdv4fTpY_ywscwd3Bgv1r9pK6RZvpMDt9b-HayPGtzgF__wJf_EVtyS6FpGTFDZEA_jEaEY4MHkC_qB-JnJOux4b0OelJgtvm5Sr60491fv62cOwGl-osl2BT9sGE6HD84q7OtMBR9srUFpy1B_hjWQ1PxuwFOQ7q94P5U7b"/>
+</div>
+<div>
+<p class="font-['Inter'] text-sm uppercase tracking-widest text-[#B5C4FF] font-bold">Lead_Architect</p>
+<p class="text-[10px] text-[#E5E2E1]/40 uppercase tracking-tighter font-mono">v2.0.4-stable</p>
+</div>
+</div>
+<nav class="flex-grow">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center px-6 py-3 gap-4 text-[#E5E2E1]/40 hover:bg-[#353534]/50 hover:text-[#B5C4FF] transition-all duration-200 ease-in-out font-['Inter'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="home">home</span>
+<span>Terminal</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-3 gap-4 bg-[#353534] text-[#7DFFA2] border-l-4 border-[#7DFFA2] transition-all duration-200 ease-in-out font-['Inter'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="Article">article</span>
+<span>Core_Logic</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-3 gap-4 text-[#E5E2E1]/40 hover:bg-[#353534]/50 hover:text-[#B5C4FF] transition-all duration-200 ease-in-out font-['Inter'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="memory">memory</span>
+<span>Hardware_Fusion</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-3 gap-4 text-[#E5E2E1]/40 hover:bg-[#353534]/50 hover:text-[#B5C4FF] transition-all duration-200 ease-in-out font-['Inter'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="person">person</span>
+<span>Bio_Data</span>
+</a>
+</li>
+<li>
+<a class="flex items-center px-6 py-3 gap-4 text-[#E5E2E1]/40 hover:bg-[#353534]/50 hover:text-[#B5C4FF] transition-all duration-200 ease-in-out font-['Inter'] text-sm uppercase tracking-widest" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="error">error</span>
+<span>System_Status</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow lg:ml-64 px-6 md:px-12 py-12 max-w-7xl">
+<!-- Header Section -->
+<section class="mb-20">
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-secondary font-mono text-[10px] uppercase tracking-[0.2em]">Live Archive Protocol // ARX-42</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-6 text-on-surface"><span class="block text-xl md:text-2xl font-normal text-on-surface-variant/80 tracking-normal mb-2">양세빈의</span>
+                    TECHNICAL<br/><span class="text-primary italic">CHRONICLES</span>
+</h1>
+<p class="max-w-2xl text-on-surface-variant body-lg leading-relaxed font-body">
+                    하드웨어와 AI의 융합, 시스템 아키텍처, 그리고 인텔리전스의 미래를 탐구하는 기술 아카이브입니다. 
+                    심층 분석 보고서와 개발 로그를 확인하세요.
+                </p>
+</section>
+<!-- Filters -->
+<div class="flex flex-wrap gap-3 mb-16 border-b border-outline-variant/15 pb-8">
+<button class="px-4 py-1.5 bg-secondary text-on-secondary text-[10px] font-bold tracking-widest uppercase rounded-sm">All_Nodes</button>
+<button class="px-4 py-1.5 bg-surface-container-high text-on-surface/60 hover:text-primary transition-colors text-[10px] font-bold tracking-widest uppercase rounded-sm">Software Engineering</button>
+<button class="px-4 py-1.5 bg-surface-container-high text-on-surface/60 hover:text-secondary transition-colors text-[10px] font-bold tracking-widest uppercase rounded-sm">AI Ethics</button>
+<button class="px-4 py-1.5 bg-surface-container-high text-on-surface/60 hover:text-tertiary transition-colors text-[10px] font-bold tracking-widest uppercase rounded-sm">Hardware Hacking</button>
+<button class="px-4 py-1.5 bg-surface-container-high text-on-surface/60 hover:text-primary-fixed-dim transition-colors text-[10px] font-bold tracking-widest uppercase rounded-sm">AI-Electronics Fusion</button>
+</div>
+<!-- Bento Grid Archive -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Featured Card 1 (Large) -->
+<article class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden bg-surface-container-low mb-6 aspect-video">
+<img alt="CPU close up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Extreme close-up of a high-end microchip circuit with blue electrical energy pulses glowing through the pathways" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAPE_J7dDZTTg2qic_qMJoEvcW7xEyaC9BiBoD8-qU_9G6tFerBtVwSq1g3sPjvzoyYSp5E9W-a2JQLj_R7hMQX8Rh43St8EMvzMjCIlrgYf6yOPlW_BWRO5rR3P2WCfYFH-_dDz3KaHufRIZkx9QeL5GDMU_uAgMztHzAuCrqh10L--4PmCrYnYrtpFi_LkAFurcJhqUi8xdy7r3Y_I56XsjshWKfnVbzwFa2mzWc6elQRm25Hijt2s_E1YhnQfCM_Edp1GpG"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-[#131313]/80 backdrop-blur text-tertiary text-[9px] font-bold tracking-widest uppercase">AI-Electronics Fusion</span>
+</div>
+</div>
+<div class="flex items-baseline gap-4 mb-3">
+<span class="font-mono text-primary text-[10px]">2024.11.05</span>
+<h2 class="font-headline text-3xl font-bold tracking-tight group-hover:text-primary transition-colors leading-tight">
+                            신경망 가속을 위한 커스텀 FPGA 아키텍처 설계 입문
+                        </h2>
+</div>
+<p class="text-on-surface-variant body-lg mb-4 line-clamp-2">
+                        에지 디바이스에서의 실시간 AI 처리를 위해 범용 GPU를 넘어선 전용 하드웨어 가속기의 필요성이 대두되고 있습니다. 
+                        Verilog를 이용한 기초적인 텐서 연산기 구현 과정을 상세히 다룹니다.
+                    </p>
+<div class="flex items-center gap-2 text-secondary font-mono text-[11px] uppercase tracking-wider">
+<span class="w-8 h-[1px] bg-secondary/30"></span>
+                        Access Protocol: READ_MORE
+                        <span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+</div>
+</article>
+<!-- Small Card 1 -->
+<article class="md:col-span-4 group cursor-pointer">
+<div class="bg-surface-container-high p-1 mb-4 h-48 overflow-hidden">
+<img alt="Neural network graph" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Abstract 3D representation of a neural network with nodes connected by glowing green digital fibers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDePZU4dUjtqB43X2RGen_9Kt6dfn2f_QqK4sMUpYo2oFBruXORKOd7WvRLUYDc2qbD3dl7s-7B9DODYkjGAozm-C3J0Cx_1X95IId_aXEYWgyn9c0zlJE4g9DchJ6TQfn2n9tpAFTr4oZ2Nhjni0lZEa_DP_QCTstdPDYE4mwKlVxKCYob-P3q97x41IdInIWPdL9czl35XCDLd9TkZiZFwGIpVc-zrIexAcfoN7hvuxwT9lwyX4eNJYmgdGndpoBoORlHu7_X"/>
+</div>
+<span class="text-primary font-mono text-[9px] uppercase tracking-widest mb-2 block">AI Ethics</span>
+<h2 class="font-headline text-xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">
+                        대규모 언어 모델의 결정론적 편향성에 대한 고찰
+                    </h2>
+<p class="text-on-surface-variant text-sm mb-4 line-clamp-3">
+                        알고리즘의 투명성이 하드웨어 계층까지 확장될 때 우리는 진정한 의미의 윤리적 AI를 구현할 수 있는가?
+                    </p>
+</article>
+<!-- Medium Card 1 -->
+<article class="md:col-span-6 group cursor-pointer mt-8">
+<div class="relative overflow-hidden bg-surface-container-low mb-6 aspect-[4/3]">
+<img alt="Hardware circuit" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Cybernetic motherboard with glowing orange and blue traces on a dark metallic surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvV-igkHA7P1WYZC3CN5dBY0LpywxX-N7NBklOx3tevhxFe8IxfpCfh_y4MrVLBbHI6ZB1Fu7SxvTMgNK5HADDFgNN1ZYWZQd8pQdk-f0UDP9iYj6yvIEtn4n0_N6iB7TaRuLeADFgvb-7N1CgrH3eiobDg4pH1cj2qFxjzBz9O9ZwJg6wl2_KeyoMgft6oxe3aPR69R2bhaXYRAFHW0CH0tQ897Tl0esGT7ZkrXtOTFdFYtVO7SPic0pnjyQe8NBgiWhoWSy7"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2 py-0.5 border border-tertiary/20 text-tertiary text-[8px] font-bold tracking-widest uppercase">Hardware Hacking</span>
+<span class="font-mono text-[#E5E2E1]/30 text-[9px]">2024.10.28</span>
+</div>
+<h2 class="font-headline text-2xl font-bold tracking-tight group-hover:text-primary transition-colors mb-3">
+                        구형 하드웨어에서 임베디드 AI를 구동하는 역공학 기법
+                    </h2>
+<p class="text-on-surface-variant text-base mb-4">
+                        제한된 리소스를 가진 레거시 칩셋에서 최신 양자화 모델을 배포하기 위한 메모리 최적화 전략과 펌웨어 패칭 기법을 소개합니다.
+                    </p>
+</article>
+<!-- Medium Card 2 -->
+<article class="md:col-span-6 group cursor-pointer mt-8">
+<div class="relative overflow-hidden bg-surface-container-low mb-6 aspect-[4/3]">
+<img alt="Code monitor" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="High contrast code on a dark monitor screen with reflections of circuit patterns in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwMPU8j9qZB9JEoYzOHagEQSH5uO0kA0FKlUaO0e7iw89S7UxA_YVEK1CWB-oS5vt3PQcbo3D6eOmHGcCMuuGWmpUIMxzHmcT1-EtYvBRYZANG3bpmDYcun5JABQEjcwl1DMRzDsYk80kdsPV-KjaGj-y8jccg0l-8e2S5m_d7LDuHPhOG63VTPIZ1NaTHF4w7-o-9MD-fRIO-gwn2vlJKHPClsUI68W15tD9mWI5N4kro5SWuHvKLeItHx5jQRBo-VeigxIFw"/>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2 py-0.5 border border-primary/20 text-primary text-[8px] font-bold tracking-widest uppercase">Software Engineering</span>
+<span class="font-mono text-[#E5E2E1]/30 text-[9px]">2024.10.15</span>
+</div>
+<h2 class="font-headline text-2xl font-bold tracking-tight group-hover:text-primary transition-colors mb-3">
+                        Rust 언어를 이용한 고가용성 마이크로서비스 엔진 구축
+                    </h2>
+<p class="text-on-surface-variant text-base mb-4">
+                        메모리 안정성과 병렬 처리 성능을 극대화한 시스템 백엔드 아키텍처. 가상화 환경에서의 실제 벤치마크 데이터를 포함합니다.
+                    </p>
+</article>
+<!-- Full Width Inset (Terminal Style) -->
+<div class="md:col-span-12 my-12 p-8 bg-surface-container-lowest border-l-2 border-secondary font-mono">
+<div class="flex justify-between items-center mb-6">
+<div class="flex gap-2">
+<span class="w-2 h-2 rounded-full bg-red-500/50"></span>
+<span class="w-2 h-2 rounded-full bg-yellow-500/50"></span>
+<span class="w-2 h-2 rounded-full bg-green-500/50"></span>
+</div>
+<span class="text-[9px] text-[#E5E2E1]/20">SYSTEM_LOG_OVERVIEW</span>
+</div>
+<div class="space-y-2 text-sm text-secondary/70">
+<p>&gt; Fetching latest metadata from repository...</p>
+<p>&gt; 4 new documents decrypted in 'Hardware_Fusion' sector.</p>
+<p>&gt; Background syncing with central intelligence node (v2.0.4)... [DONE]</p>
+<p class="text-[#E5E2E1]/40">&gt; Input required to access classified engineering blueprints.</p>
+<p class="animate-pulse">_</p>
+</div>
+</div>
+<!-- List View (Standard archives) -->
+<div class="md:col-span-12 space-y-12 mb-20">
+<h3 class="font-headline text-sm font-bold tracking-[0.4em] uppercase text-on-surface/40 mb-12 border-b border-outline-variant/10 pb-4">Older_Transmissions</h3>
+<div class="flex flex-col md:flex-row gap-8 items-start group cursor-pointer">
+<div class="w-full md:w-48 h-32 bg-surface-container-high shrink-0 overflow-hidden">
+<img alt="Electronics tools" class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300" data-alt="Technical workbench with soldering tools, multimeters and disassembled electronics components in low light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq3RDiIn2q6AzKug5QYxnT9TAVECZstv6PQX309H4pI6z-DQIFRuAcC6dILf5yJZKIXKRfhJ3Z_VKWolX_RVi7ROcob8CC__YOQsVZqmLJojjOpN8vo1-2rst83AZzhu2dUkeSi1UIL4TK7FTmsaejsT4Q86oH43zPanLzzWwu_3HMw5aFyBmeduQzldJQXaZgtTefEoRBG1ahc84S2HGe1ivKz1QkxRVO7GXAkhrqqqn7U5UFAGUKNRlR_zAkyFx4cSWbBdqX"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-4 mb-2">
+<span class="text-[10px] font-mono text-tertiary">2024.09.30</span>
+<span class="text-[9px] font-bold text-on-surface/30 uppercase tracking-widest">Hardware Hacking</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2 group-hover:text-primary transition-colors">SDR을 이용한 위성 신호 가로채기와 복조 기술</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2">저궤도 위성에서 송출되는 오픈 소스 데이터를 수신하고 시각화하는 전체 파이프라인 구축 가이드.</p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start group cursor-pointer">
+<div class="w-full md:w-48 h-32 bg-surface-container-high shrink-0 overflow-hidden">
+<img alt="Server room" class="w-full h-full object-cover grayscale opacity-50 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-300" data-alt="Dark server room with rows of blinking LED lights in blue and green reflecting on a polished floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3m3WcKEAzi1qFoE1K8o_5AEcooUMy_urTXuiAF2nXLtC_m5iIm4h7wELs76GPs5EG_kuTkuLgjk_f5fGtof332zovEdLADGIWdPYFtsoJwsWV6KCWuGOqt_PgQQWz9533k3leUcPG-kLxzwma4yj_PXzdDIa4qb99G6R18LnYGaW6dAwkdW6ztGbao2Vb9IKVkKPMzysTi_USdC0HWJKGI4daIYt9VMJCzhwxPrDximChVinfoadp5hRkghfzIS-XjXkAebYs"/>
+</div>
+<div class="flex-grow">
+<div class="flex items-center gap-4 mb-2">
+<span class="text-[10px] font-mono text-primary">2024.09.12</span>
+<span class="text-[9px] font-bold text-on-surface/30 uppercase tracking-widest">Software Engineering</span>
+</div>
+<h4 class="font-headline text-xl font-bold mb-2 group-hover:text-primary transition-colors">클라우드 네이티브 환경에서의 무중단 배포 전략</h4>
+<p class="text-on-surface-variant text-sm line-clamp-2">Kubernetes 환경에서 데이터 정합성을 유지하면서 서비스를 업데이트하는 Blue-Green 및 Canary 전략 심층 분석.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-8 py-12 border-t border-outline-variant/10">
+<button class="flex items-center gap-2 text-on-surface/30 hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-sm group-active:scale-95 transition-transform" data-icon="arrow_back">arrow_back</span>
+<span class="font-mono text-[10px] uppercase tracking-widest">Prev_Sector</span>
+</button>
+<div class="flex gap-4 font-mono text-[10px]">
+<span class="text-primary font-bold underline underline-offset-8">01</span>
+<span class="text-on-surface/30 hover:text-on-surface cursor-pointer">02</span>
+<span class="text-on-surface/30 hover:text-on-surface cursor-pointer">03</span>
+<span class="text-on-surface/30">...</span>
+<span class="text-on-surface/30 hover:text-on-surface cursor-pointer">12</span>
+</div>
+<button class="flex items-center gap-2 text-on-surface/30 hover:text-primary transition-colors group">
+<span class="font-mono text-[10px] uppercase tracking-widest">Next_Sector</span>
+<span class="material-symbols-outlined text-sm group-active:scale-95 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-[#131313] w-full border-t border-[#434654]/10 py-12 mt-24">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 w-full max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-['Space_Grotesk'] tracking-widest text-xl font-bold text-[#B5C4FF] uppercase">NEURAL_MONOLITH</span>
+<p class="font-['Roboto_Mono'] text-[10px] uppercase text-[#7DFFA2] text-center md:text-left">© 2024 NEURAL_MONOLITH // HARDWARE_AI_FUSION</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Roboto_Mono'] text-[10px] uppercase text-[#E5E2E1]/30 hover:text-[#B5C4FF] transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-['Roboto_Mono'] text-[10px] uppercase text-[#E5E2E1]/30 hover:text-[#B5C4FF] transition-colors opacity-80 hover:opacity-100" href="#">Documentation</a>
+<a class="font-['Roboto_Mono'] text-[10px] uppercase text-[#E5E2E1]/30 hover:text-[#B5C4FF] transition-colors opacity-80 hover:opacity-100" href="#">Status</a>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-[#7DFFA2] animate-pulse"></div>
+<span class="font-['Roboto_Mono'] text-[9px] uppercase text-[#7DFFA2]">All systems operational</span>
+</div>
+</div>
+</footer>
+</body></html>

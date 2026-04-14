@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="ko-KR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Roboto+Mono:wght@400;700&amp;family=Space+Grotesk:wght@300;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#3e6dee",
+                        "inverse-primary": "#1b53d5",
+                        "secondary-fixed-dim": "#00e475",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#131313",
+                        "outline": "#8d90a0",
+                        "tertiary": "#4cd6ff",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#434654",
+                        "on-tertiary-container": "#ffffff",
+                        "tertiary-container": "#00819e",
+                        "on-tertiary-fixed": "#001f28",
+                        "inverse-on-surface": "#313030",
+                        "on-background": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "on-surface-variant": "#c3c5d7",
+                        "primary-fixed-dim": "#b5c4ff",
+                        "on-secondary": "#003918",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container-highest": "#353534",
+                        "error-container": "#93000a",
+                        "surface": "#131313",
+                        "secondary-fixed": "#62ff96",
+                        "on-tertiary": "#003543",
+                        "background": "#131313",
+                        "on-primary-container": "#ffffff",
+                        "tertiary-fixed": "#b7eaff",
+                        "on-tertiary-fixed-variant": "#004e60",
+                        "surface-tint": "#b5c4ff",
+                        "on-primary-fixed-variant": "#003cac",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-variant": "#353534",
+                        "tertiary-fixed-dim": "#4cd6ff",
+                        "on-secondary-fixed": "#00210b",
+                        "on-primary-fixed": "#00164d",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "primary": "#b5c4ff",
+                        "on-secondary-container": "#00622e",
+                        "on-secondary-fixed-variant": "#005226",
+                        "on-primary": "#00297b",
+                        "on-error": "#690005",
+                        "secondary-container": "#05e777",
+                        "surface-bright": "#393939",
+                        "secondary": "#7dffa2",
+                        "surface-container-low": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "mono": ["Roboto Mono"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glitch-text {
+            text-shadow: 2px 0 #b5c4ff, -2px 0 #7dffa2;
+        }
+        .crt-overlay {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body overflow-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#131313]/70 backdrop-blur-xl fixed top-0 w-full z-50 shadow-[0_24px_48px_rgba(0,0,0,0.4)] bg-gradient-to-b from-[#1C1B1B] to-[#131313]">
+<div class="flex justify-between items-center px-6 h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#B5C4FF]" data-icon="memory">memory</span>
+<span class="font-['Space_Grotesk'] tracking-widest uppercase text-2xl font-bold text-[#B5C4FF]">NEURAL_MONOLITH</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tighter uppercase">
+<a class="text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Terminal</a>
+<a class="text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Core_Logic</a>
+<a class="text-[#E5E2E1]/60 hover:text-[#7DFFA2] transition-colors duration-300" href="#">Bio_Data</a>
+<span class="material-symbols-outlined text-[#B5C4FF] cursor-pointer hover:text-[#7DFFA2] transition-colors" data-icon="terminal">terminal</span>
+</div>
+</div>
+</header>
+<main class="relative min-h-screen flex items-center justify-center pt-16">
+<!-- Background Aesthetic -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full mix-blend-screen filter blur-[128px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary rounded-full mix-blend-screen filter blur-[128px]"></div>
+</div>
+<div class="crt-overlay absolute inset-0 z-10"></div>
+<section class="relative z-20 w-full max-w-4xl px-6 py-12">
+<div class="flex flex-col md:flex-row gap-12 items-center md:items-start">
+<!-- Large Status Code -->
+<div class="shrink-0">
+<h1 class="font-headline text-[8rem] md:text-[12rem] leading-none font-bold tracking-tighter text-primary-fixed-dim glitch-text">
+                        404
+                    </h1>
+</div>
+<!-- Content Area -->
+<div class="flex-1 space-y-8 text-center md:text-left">
+<div class="space-y-4">
+<div class="inline-flex items-center gap-2 bg-error-container/20 px-3 py-1 rounded-sm border-l-2 border-error">
+<span class="material-symbols-outlined text-error text-sm" data-icon="error">error</span>
+<span class="font-mono text-xs text-error uppercase tracking-widest">System_Alert: CRITICAL_FAILURE</span>
+</div>
+<h2 class="font-headline text-3xl md:text-5xl font-bold text-on-surface leading-tight">
+                            ERROR 404: System Logic Not Found. 
+                            <span class="block text-primary">This branch does not exist in the master repository.</span>
+</h2>
+<p class="font-mono text-on-surface-variant text-lg">
+                            시스템 로직을 찾을 수 없습니다. 요청하신 경로는 현재 마스터 저장소에 존재하지 않거나 액세스가 거부되었습니다.
+                        </p>
+</div>
+<!-- Tech Detail Bento Card -->
+<div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant/15 font-mono text-xs space-y-3">
+<div class="flex justify-between items-center text-secondary">
+<span>IDENTIFIER: 0xDEADBEEF</span>
+<span>STATUS: DISCONNECTED</span>
+</div>
+<div class="h-px bg-outline-variant/10 w-full"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-on-surface-variant/70">
+<div>
+<p class="text-on-surface-variant uppercase font-bold">Trace Log:</p>
+<p>&gt; INITIALIZING_SEQUENCE...</p>
+<p>&gt; FETCHING_URI_MAPPING...</p>
+<p>&gt; [FAILED] NULL_POINTER_EXCEPTION</p>
+</div>
+<div>
+<p class="text-on-surface-variant uppercase font-bold">Environment:</p>
+<p>OS: NEURAL_MONOLITH_v2.0.4</p>
+<p>KERNEL: STABLE_ARCH_v6.1</p>
+<p>USER: LEAD_ARCHITECT</p>
+</div>
+</div>
+</div>
+<!-- CTA Actions -->
+<div class="flex flex-wrap gap-4 justify-center md:justify-start">
+<a class="group flex items-center gap-3 bg-primary text-on-primary px-8 py-4 rounded-sm font-mono uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95 shadow-[0_0_20px_rgba(181,196,255,0.3)]" href="/">
+<span class="material-symbols-outlined text-xl" data-icon="terminal">terminal</span>
+<span>Execute Home_Command</span>
+</a>
+<button class="group flex items-center gap-3 bg-surface-container-highest text-on-surface px-8 py-4 rounded-sm font-mono uppercase tracking-widest hover:bg-surface-bright transition-all border border-outline-variant/20" onclick="window.history.back()">
+<span class="material-symbols-outlined text-xl" data-icon="keyboard_return">keyboard_return</span>
+<span>Step_Back</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="fixed bottom-0 w-full bg-[#131313] border-t border-[#434654]/10 py-8 z-50">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 w-full max-w-7xl mx-auto gap-4">
+<div class="font-['Roboto_Mono'] text-[10px] uppercase text-[#E5E2E1]/30 tracking-widest">
+                © 2024 <span class="text-[#B5C4FF]">NEURAL_MONOLITH</span> // HARDWARE_AI_FUSION
+            </div>
+<div class="flex gap-8">
+<a class="font-['Roboto_Mono'] text-[10px] uppercase text-[#E5E2E1]/30 hover:text-[#B5C4FF] transition-all opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-['Roboto_Mono'] text-[10px] uppercase text-[#E5E2E1]/30 hover:text-[#B5C4FF] transition-all opacity-80 hover:opacity-100" href="#">Documentation</a>
+<a class="font-['Roboto_Mono'] text-[10px] uppercase text-[#7DFFA2] hover:text-[#B5C4FF] transition-all opacity-80 hover:opacity-100" href="#">Status: ERROR_404</a>
+</div>
+</div>
+</footer>
+<!-- Decorative Corner Element -->
+<div class="fixed bottom-24 right-8 z-30 hidden lg:block">
+<div class="flex items-center gap-4 bg-surface-container-low/50 backdrop-blur-md p-4 rounded-sm border border-outline-variant/15">
+<div class="relative w-3 h-3">
+<div class="absolute inset-0 bg-secondary rounded-full animate-ping opacity-75"></div>
+<div class="relative bg-secondary w-3 h-3 rounded-full"></div>
+</div>
+<div class="space-y-1">
+<p class="font-mono text-[10px] text-secondary-fixed-dim uppercase leading-none">System_Uptime</p>
+<p class="font-mono text-sm font-bold text-on-surface leading-none">99.98% CORE_STABLE</p>
+</div>
+</div>
+</div>
+</body></html>
