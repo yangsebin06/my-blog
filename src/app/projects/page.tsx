@@ -41,12 +41,12 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {PROJECTS.map((project) => (
-          <article key={project.id} className="bg-white rounded-[2rem] p-8 border border-apple-border/40 hover:shadow-apple transition-all duration-300 flex flex-col h-full group">
-            <div className="mb-8 w-16 h-16 bg-apple-gray flex items-center justify-center rounded-2xl text-apple-text group-hover:bg-apple-blue group-hover:text-white transition-colors duration-300 shadow-sm">
+          <article key={project.id} className="bg-apple-card rounded-[2rem] p-8 border border-apple-border/30 hover:shadow-apple transition-all duration-300 flex flex-col h-full group hover:border-apple-blue/40">
+            <div className="mb-8 w-16 h-16 bg-apple-bg border border-apple-border/40 flex items-center justify-center rounded-2xl text-apple-text group-hover:bg-apple-blue group-hover:text-white group-hover:border-apple-blue transition-colors duration-300 shadow-sm">
               <span className="material-symbols-outlined text-[32px]">{project.icon}</span>
             </div>
             
-            <h2 className="text-2xl font-bold mb-3 text-apple-text tracking-tight">
+            <h2 className="text-2xl font-bold mb-3 text-apple-text tracking-tight group-hover:text-apple-blue transition-colors duration-300">
               {project.title}
             </h2>
             
@@ -56,7 +56,7 @@ export default function Projects() {
 
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tags.map(tag => (
-                <span key={tag} className="bg-apple-gray text-apple-textMute text-[11px] px-2.5 py-1 rounded-full font-bold">
+                <span key={tag} className="bg-apple-bg border border-apple-border/40 text-apple-textMute text-[11px] px-2.5 py-1 rounded-full font-bold">
                   {tag}
                 </span>
               ))}

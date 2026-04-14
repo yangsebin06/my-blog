@@ -11,14 +11,14 @@ const config: Config = {
     extend: {
       colors: {
         apple: {
-          light: '#fbfbfd',
-          gray: '#f5f5f7',
-          dark: '#1d1d1f',
-          blue: '#0066cc',
-          blueHover: '#0077ed',
-          border: '#d2d2d7',
-          text: '#1d1d1f',
-          textMute: '#86868b'
+          bg: '#000000',         // Pitch Black
+          card: '#161618',       // Slightly lighter black for cards
+          cardHover: '#1c1c1e',  // Hover state
+          blue: '#2997ff',       // Apple Blue for Dark Mode
+          blueHover: '#3b9eff',
+          border: '#333336',     // Subtle border
+          text: '#f5f5f7',       // Pure white-ish text
+          textMute: '#86868b'    // Gray muted text
         }
       },
       fontFamily: {
@@ -26,8 +26,8 @@ const config: Config = {
         "mono": ["Fira Code", "monospace"]
       },
       boxShadow: {
-        'apple': '0 4px 24px rgba(0,0,0,0.06)',
-        'apple-hover': '0 8px 32px rgba(0,0,0,0.1)'
+        'apple': '0 0px 20px rgba(0,0,0,0.4)',
+        'apple-hover': '0 0px 40px rgba(41,151,255,0.1)'
       }
     },
   },
